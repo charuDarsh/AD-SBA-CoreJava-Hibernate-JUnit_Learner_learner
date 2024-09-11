@@ -1,0 +1,21 @@
+<!-- suppress CheckTagEmptyBody  -->
+<hibernate-configuration>
+    <session-factory>
+        <!--  MySQL Database  -->
+        <!--  Drop and re-create the database on startup  -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!--  Database connection settings  -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/smsdb_ll?createDatabaseIfNotExist=true</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Noida@201301</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--  print all executed SQL on console  -->
+        <!-- <property name="hibernate.show_sql" >true </property> -->
+        <!--  <property name="hibernate.format_sql" >true </property> -->
+        <!--    Mapping entity file  -->
+        <mapping class="sba.sms.models.Student"/>
+        <mapping class="sba.sms.models.Course"/>
+    </session-factory>
+</hibernate-configuration>
